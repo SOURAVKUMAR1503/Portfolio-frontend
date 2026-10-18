@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Footer from './common/Footer';
 import auth from '../config/firebase';
+
+const API_URL = "https://portfolio-backend-xuqe.vercel.app/api/blogs";
 
 function Blogs() {
     const [blogs, setBlogs] = useState([]);
@@ -29,9 +30,7 @@ function Blogs() {
 
     const fetchBlogs = async () => {
         try {
-            const response = await axios.get(
-                "http://localhost:5000/api/blogs"
-            );
+            const response = await axios.get(API_URL);
             console.log("Blogs fetched:", response.data);
             setBlogs(response.data);
         } catch (error) {
@@ -44,10 +43,7 @@ function Blogs() {
 
     const handleLike = async (blog_id) => {
         try {
-            await axios.patch(
-                `http://localhost:5000/api/blogs/like/${blog_id}`
-            );
-
+            await axios.patch(`${API_URL}/like/${blog_id}`);
             await fetchBlogs();
         } catch (error) {
             console.error(
@@ -68,15 +64,12 @@ function Blogs() {
         });
 
         try {
-            const response = await axios.post(
-                "http://localhost:5000/api/blogs",
-                {
-                    newTitle,
-                    newContent,
-                    date,
-                    likes: 0
-                }
-            );
+            const response = await axios.post(API_URL, {
+                newTitle,
+                newContent,
+                date,
+                likes: 0
+            });
 
             console.log("Blog added successfully:", response.data);
 

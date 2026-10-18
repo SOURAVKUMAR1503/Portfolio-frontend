@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -34,14 +33,12 @@ function Home() {
 
   return (
     <main className="overflow-hidden bg-white text-gray-800">
-
       {/* Hero Section */}
       <section className="relative px-6 py-16 sm:px-10 md:py-24 lg:px-20">
         <div className="pointer-events-none absolute -left-20 top-10 h-64 w-64 rounded-full bg-orange-200/40 blur-3xl" />
         <div className="pointer-events-none absolute right-0 top-20 h-64 w-64 rounded-full bg-purple-100/60 blur-3xl" />
 
         <div className="relative mx-auto flex max-w-7xl flex-col-reverse items-center gap-12 md:flex-row md:justify-between">
-
           <div className="w-full text-center md:w-3/5 md:text-left">
             <span className="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50 px-4 py-2 text-sm font-medium text-orange-600">
               <span className="h-2 w-2 animate-pulse rounded-full bg-green-500" />
@@ -66,13 +63,16 @@ function Home() {
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4 md:justify-start">
-              <a href="#"
+              <button
+                type="button"
+                onClick={() => navigate("/contact")}
                 className="rounded-xl bg-orange-500 px-7 py-3.5 font-semibold text-white shadow-lg shadow-orange-200 transition duration-300 hover:-translate-y-1 hover:bg-orange-600 hover:shadow-orange-300"
               >
                 Hire Me <span className="ml-2">↗</span>
-              </a>
+              </button>
 
               <button
+                type="button"
                 onClick={() =>
                   document.getElementById("projects")?.scrollIntoView({
                     behavior: "smooth",
@@ -118,9 +118,7 @@ function Home() {
               />
 
               <div className="absolute -bottom-5 -left-5 rounded-2xl border border-gray-100 bg-white px-5 py-4 shadow-xl">
-                <p className="text-xs text-gray-500">
-                  Passionate about
-                </p>
+                <p className="text-xs text-gray-500">Passionate about</p>
                 <p className="mt-1 font-bold text-orange-500">
                   Design & Development ✨
                 </p>
@@ -154,6 +152,7 @@ function Home() {
                     className="h-9 w-9 object-contain transition duration-300 group-hover:scale-110"
                   />
                 </div>
+
                 <p className="mt-3 text-sm font-semibold text-gray-600 transition group-hover:text-orange-500">
                   {skill.name}
                 </p>
@@ -166,7 +165,6 @@ function Home() {
       {/* Services */}
       <section className="px-6 py-20 sm:px-10 lg:px-20 lg:py-24">
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
-
           <div>
             <span className="rounded-full bg-orange-50 px-4 py-2 text-sm font-bold text-orange-500">
               WHAT I OFFER
@@ -189,9 +187,7 @@ function Home() {
                   ✦
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-800">
-                    Web Development
-                  </h3>
+                  <h3 className="font-bold text-gray-800">Web Development</h3>
                   <p className="mt-1 text-sm leading-6 text-gray-500">
                     Responsive and modern websites built for your needs.
                   </p>
@@ -203,9 +199,7 @@ function Home() {
                   ◈
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-800">
-                    Frontend Development
-                  </h3>
+                  <h3 className="font-bold text-gray-800">Frontend Development</h3>
                   <p className="mt-1 text-sm leading-6 text-gray-500">
                     Clean interfaces with interactive user experiences.
                   </p>
@@ -217,9 +211,7 @@ function Home() {
                   ⌘
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-800">
-                    Backend & Database
-                  </h3>
+                  <h3 className="font-bold text-gray-800">Backend & Database</h3>
                   <p className="mt-1 text-sm leading-6 text-gray-500">
                     Functional applications with reliable data handling.
                   </p>
@@ -243,9 +235,7 @@ function Home() {
               <div className="flex items-center justify-between border-b border-gray-100 pb-5">
                 <div>
                   <p className="text-sm text-gray-500">A little about me</p>
-                  <h3 className="mt-1 text-xl font-extrabold">
-                    My Journey
-                  </h3>
+                  <h3 className="mt-1 text-xl font-extrabold">My Journey</h3>
                 </div>
                 <span className="rounded-xl bg-orange-100 px-4 py-3 text-2xl">
                   🚀
@@ -291,9 +281,7 @@ function Home() {
               </div>
 
               <div className="mt-8 rounded-2xl bg-gradient-to-r from-orange-500 to-orange-400 p-5 text-white">
-                <p className="text-sm text-orange-50">
-                  My philosophy
-                </p>
+                <p className="text-sm text-orange-50">My philosophy</p>
                 <p className="mt-2 text-lg font-bold">
                   Keep learning. Keep building. Keep growing.
                 </p>
@@ -382,9 +370,7 @@ function Home() {
 
             <h2 className="mt-6 text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
               I Like to Write
-              <span className="mt-2 block text-orange-500">
-                Tech Blogs.
-              </span>
+              <span className="mt-2 block text-orange-500">Tech Blogs.</span>
             </h2>
 
             <p className="mt-6 leading-8 text-gray-500">
@@ -394,6 +380,7 @@ function Home() {
             </p>
 
             <button
+              type="button"
               onClick={() => navigate("/blogs")}
               className="mt-8 rounded-xl bg-orange-500 px-7 py-3.5 font-semibold text-white shadow-lg shadow-orange-100 transition duration-300 hover:-translate-y-1 hover:bg-orange-600"
             >
@@ -423,15 +410,16 @@ function Home() {
               Let's create something meaningful together.
             </p>
 
-            <a href="#"
+            <button
+              type="button"
+              onClick={() => navigate("/contact")}
               className="mt-8 inline-flex rounded-xl bg-orange-500 px-8 py-4 font-bold text-white transition duration-300 hover:-translate-y-1 hover:bg-orange-400"
             >
               Get In Touch ↗
-            </a>
+            </button>
           </div>
         </div>
       </section>
-
     </main>
   );
 }

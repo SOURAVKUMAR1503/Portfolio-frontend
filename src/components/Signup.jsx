@@ -20,7 +20,7 @@ function Signup() {
             }
         })
 
-    }, []);
+    }, [navigate]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();

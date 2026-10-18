@@ -18,7 +18,7 @@ function Login() {
             }
         })
 
-    }, []);
+    }, [navigate]);
 
     const handleLogin = (e) => {
         e.preventDefault();

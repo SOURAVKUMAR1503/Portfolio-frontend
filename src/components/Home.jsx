@@ -66,7 +66,7 @@ function Home() {
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4 md:justify-start">
-              <a
+              <a href="#"
                 className="rounded-xl bg-orange-500 px-7 py-3.5 font-semibold text-white shadow-lg shadow-orange-200 transition duration-300 hover:-translate-y-1 hover:bg-orange-600 hover:shadow-orange-300"
               >
                 Hire Me <span className="ml-2">↗</span>
@@ -423,7 +423,7 @@ function Home() {
               Let's create something meaningful together.
             </p>
 
-            <a
+            <a href="#"
               className="mt-8 inline-flex rounded-xl bg-orange-500 px-8 py-4 font-bold text-white transition duration-300 hover:-translate-y-1 hover:bg-orange-400"
             >
               Get In Touch ↗
